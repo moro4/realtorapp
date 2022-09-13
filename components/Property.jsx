@@ -10,7 +10,7 @@ import millify from 'millify';
 function Property({ property: { coverPhoto, price, rentFrequency, rooms,
       title, baths, area, agency, isVerified, externalID } }) {
    return (
-      <Link href={`/property/${externalID}`} passHref >
+      <Link href={`/property/${externalID}`}>
          <Flex flexWrap='wrap' w='420px' p='5' pt='0' cursor='pointer'
             justifyContent='flex-start'
          >
