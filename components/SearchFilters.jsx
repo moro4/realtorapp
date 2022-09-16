@@ -2,22 +2,21 @@ import {useEffect, useState} from 'react';
 import {Flex, Select, Box, Text, Input, Spinner, Icon, Button}
    from '@chakra-ui/react';
 import {router} from 'next/router';
-import {MdCancel} from 'react-icons/md';
-import Image from 'next/image';
-import {filterOptions, getFilterValues} from '../utils/filterOptions';
-import { BsReverseLayoutTextSidebarReverse } from 'react-icons/bs';
+import {filterOptions} from '../utils/filterOptions';
 
 function SearchFilters() {
    const [filters, setFilters] = useState(filterOptions);
 
-   function searchProperties(filterValues) {
+   function searchProperties(selectedFilter) {
+      const filterKey = Object.keys(selectedFilter);
       const path = router.pathname;
       const {query} = router
-      const values = getFilterValues(filterValues);
 
-      values.forEach(item => {
-         query[item.name] = item.value
-      });
+      if (!selectedFilter[filterKey]) {
+         delete query[filterKey]
+      } else {
+         query[filterKey] = selectedFilter[filterKey]
+      }
 
       router.push({pathname: path, query})
    }

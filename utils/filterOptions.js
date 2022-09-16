@@ -66,15 +66,15 @@ export const filterOptions = [
    },
    {
      items: [
+       { name: '100', value: '100' },
+       { name: '200', value: '200' },
+       { name: '300', value: '300' },
+       { name: '400', value: '400' },
+       { name: '500', value: '500' },
        { name: '1000', value: '1000' },
        { name: '2000', value: '2000' },
-       { name: '3000', value: '3000' },
-       { name: '4000', value: '4000' },
-       { name: '5000', value: '5000' },
-       { name: '10000', value: '10000' },
-       { name: '20000', value: '20000' },
      ],
-     placeholder: 'Max Area(sqft)',
+     placeholder: 'Max Living Area (m2)',
      queryName: 'areaMax',
    },
    {
