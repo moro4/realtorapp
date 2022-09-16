@@ -35,7 +35,7 @@ function ImageScrollbar({data}) {
                key={item.id}
             >
                <Image placeholder='blur' blurDataURL={item.url} src={item.url}
-                  width='1000' height='500' alt='property'
+                  width='1000px' height='500px' alt='property'
                   sizes='(max-width:500px) 100px, (max-width:1024px) 400px, 1000px'
                />
             </Box>
