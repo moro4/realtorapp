@@ -6,4 +6,4 @@ Another JAM front end application. It provides a simple and convenient interface
 
 The technical underpinnings are next.js and chakra ui. The app consumes all its data from a single API source with a few endpoints.
 
-[Realtor online presence](https://site.com)
+[Realtor demo site](https://therealtorapp.netlify.app/)
